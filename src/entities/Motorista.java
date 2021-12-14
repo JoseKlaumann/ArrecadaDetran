@@ -23,6 +23,7 @@ public class Motorista {
 	public Motorista() {		
 	}
 	
+	//construtor para adicionar os dados a tabela
 	public Motorista(Integer numeroCnh, Float valorMulta, Integer pontos, Float totalMultas, Integer somaPontos, Natureza natureza) {	
 		this.numeroCnh   = numeroCnh;
 		this.valorMulta  = valorMulta;
@@ -126,8 +127,9 @@ public class Motorista {
 		this.natureza = natureza;
 	}
 
-	//Pontos
+	//Calcula os pontos, o valor da multa e traz a natureza da multa
 	public int pontuacao(char natureza){
+		//Faz o teste a partir de uma variavel char
 		switch (natureza) {
 		    case ('L'):
 		    	pontos     = leve + 3;
@@ -157,6 +159,7 @@ public class Motorista {
 		return pontos;
 	}
 	
+	//Faz a impressao dos dados, os mesmos do construtor
 	public String toString() {
 		return "Numero da CNH: "      + getNumeroCnh()
 			  +	"\nNatureza: "        + getNatureza().toString()

@@ -31,8 +31,10 @@ public class Program {
 					System.out.print("Leve(L), Média(M), Grave(G) ou Gravíssima(V): ");
 					char natureza = sc.next().charAt(0);
 					
+					//Chama o metodo para testar os pontos, o valor das multas e a natureza da multa
 					motora.pontuacao(natureza);
 					
+					//Adiciona na lista os valores 
 					list.add(new Motorista(numeroCnh, motora.getValorMulta(), motora.getPontos(), motora.getTotalMultas(), motora.getSomaPontos(), motora.getNatureza()));	
 					System.out.println();
 				}		
@@ -46,6 +48,8 @@ public class Program {
 			
 			System.out.println();
 			System.out.println("Motoristas cadastrados: " + somaMotora);
+			
+			//Faz a impressao dos dados que estao no array
 			for (Motorista mot : list) {
 				System.out.println(mot.toString());
 				System.out.println();
